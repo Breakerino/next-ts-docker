@@ -1,0 +1,76 @@
+:root {
+	--site-container-width: 144rem;
+	--site-gutter-x: 4.8rem;
+}
+
+@media (max-width: 148.8rem) {
+	:root {
+		--site-container-width: 100%;		
+		--site-gutter-x: 2.4rem;
+	}
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	width: var(--site-container-width);
+	margin: auto;
+}
+
+main,
+footer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+main {
+	padding: 0 var(--site-gutter-x);
+	flex: 1 0 0;
+}
+
+main > .container {
+	display: grid;
+	place-items: center;
+	gap: 1.6rem;
+}
+
+main h1 {
+	font-size: 2.4rem;
+	text-align: center;
+}
+
+footer {
+	margin-top: auto;
+	padding: 2rem var(--site-gutter-x);
+}
+
+footer > .container {
+	display: grid;
+	place-items: center;
+}
+
+footer .created-by {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	font-size: 1.6rem;
+}
+
+@media (prefers-color-scheme: light) {
+	footer {
+		color: var(--background);
+		background: var(--foreground);
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.nextjs-logo {
+		filter: invert();
+	}
+}
